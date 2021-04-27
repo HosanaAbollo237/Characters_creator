@@ -8,7 +8,7 @@ class CharactersCreator extends Component {
     state = {
         character: {
             picture: 1,
-            force: 0,
+            strength: 0,
             agility: 0,
             intellect: 0
         }
@@ -16,12 +16,8 @@ class CharactersCreator extends Component {
 
   render(){  
     return (
-        <>>
-            <div className="row row-cols-2">
-                <div className="col h-50">Picture character part</div>
-                <div className="col h-50">Skills part</div>
-                <div className="col ">Weapons</div>
-            </div>
+        <>
+            <Character {...this.state.character} />
 
             <div className="row p-2 m-2">
                 <Button btnType="btn-danger" clic={() => {console.log('reset')}}  css="col-6">Reset</Button>
