@@ -8,7 +8,10 @@ const Character = (props) => {
 
             <div className="row no-gutters">
                 <div className="col col-6">
-                    <CharacterPicture numPicture={props.picture}/>
+                    <CharacterPicture 
+                    leftArrow={props.previousPicture}
+                    rightArrow={props.nextPicture}
+                    numPicture={props.picture}/>
                 </div>
                 <div className="col col-6">
                     Strength: {props.strength} <br/>

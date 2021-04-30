@@ -7,17 +7,52 @@ class CharactersCreator extends Component {
 
     state = {
         character: {
-            picture: 3,
+            picture: 1,
             strength: 0,
             agility: 0,
             intellect: 0
         }
     }
 
+
+    handlePreviousPicture = () => {
+        this.setState((oldState) => {
+            let newCharacter = {...oldState.character}
+            if(oldState.character.picture <= 1){
+                newCharacter.picture = 3
+            }else {
+                newCharacter.picture--
+            }
+            return{
+                character: newCharacter
+            }
+        })
+    }
+
+    handleNextPicture = () => {
+        this.setState((oldState) => 
+        {
+            let newCharacter = {...oldState.character}
+            if(oldState.character.picture >= 3){
+                newCharacter.picture = 1
+            }else {
+                newCharacter.picture++
+            }
+            return{
+                character: newCharacter
+            }
+        })
+    }
+
+
   render(){  
     return (
         <>
-            <Character {...this.state.character} />
+            <Character 
+                {...this.state.character} 
+                previousPicture={this.handlePreviousPicture}
+                nextPicture={this.handleNextPicture}
+            />
             <Weapons />
 
             <div className="row p-2 m-2">

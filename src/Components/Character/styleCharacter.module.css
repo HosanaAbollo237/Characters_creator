@@ -1,0 +1,22 @@
+.divParent {
+    display: flex;
+    justify-content: space-between;
+}
+
+#triangle {
+	background-color: #003BDE;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+	width: 100px;
+	height: 100px;
+    cursor: pointer;
+}
+
+.triangle_1{
+    transform: rotate(-90deg) scale(0.5);
+    /* clip-path: polygon(100% 100%, 100% 0, 0 50%)*/
+}
+
+.triangle_2{
+    transform: rotate(90deg) scale(0.5);
+    /* clip-path: polygon(0 0, 0 100%, 100% 50%)*/
+}
