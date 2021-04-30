@@ -10,8 +10,9 @@ class CharactersCreator extends Component {
             picture: 1,
             strength: 0,
             agility: 0,
-            intellect: 0
-        }
+            intellect: 0,
+        },
+        pointsLeft: 7
     }
 
 
@@ -50,6 +51,7 @@ class CharactersCreator extends Component {
         <>
             <Character 
                 {...this.state.character} 
+                pointsLeft = {this.state.pointsLeft} 
                 previousPicture={this.handlePreviousPicture}
                 nextPicture={this.handleNextPicture}
             />

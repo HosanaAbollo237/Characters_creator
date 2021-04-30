@@ -1,6 +1,6 @@
 import React from 'react'
 import CharacterPicture from './CharacterPicture/CharacterPicture'
-
+import CharacterFeatures from './CharacterFeatures/CharacterFeatures'
 const Character = (props) => {
     return(
         <>
@@ -14,9 +14,12 @@ const Character = (props) => {
                     numPicture={props.picture}/>
                 </div>
                 <div className="col col-6">
-                    Strength: {props.strength} <br/>
-                    Agility: {props.agility} <br/>
-                    Intellect: {props.intellect} <br/>
+                   <CharacterFeatures 
+                        intellect={props.intellect}
+                        agility={props.agility}
+                        strength={props.strength}
+                        pointsLeft={props.pointsLeft}
+                   />
                 </div>
             </div>
         </>     
