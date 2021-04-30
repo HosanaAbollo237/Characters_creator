@@ -1,21 +1,22 @@
 import React from 'react'
-
+import CharacterPicture from './CharacterPicture/CharacterPicture'
 
 const Character = (props) => {
     return(
         <>
             <h2>Personnage</h2>
 
-            <div className="row row-cols-2">
-                <div className="col h-50">Picture: {props.picture}</div>
-                <div className="col h-50">
+            <div className="row no-gutters">
+                <div className="col col-6">
+                    <CharacterPicture numPicture={props.picture}/>
+                </div>
+                <div className="col col-6">
                     Strength: {props.strength} <br/>
                     Agility: {props.agility} <br/>
                     Intellect: {props.intellect} <br/>
                 </div>
-                <div className="col ">Weapons</div>
             </div>
-        </>
+        </>     
     )
 }
 export default Character;
