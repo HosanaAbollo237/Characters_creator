@@ -1,16 +1,19 @@
 import React from 'react'
+import Features from './Features/Features'
 
 const CharacterFeatures = (props) => {
-    const styleUl = {listStyleType: "none"}
+    
     return(
-        <div>
-            <ul style={styleUl}>
-                <li>Points lefts: {props.pointsLeft}</li>
-                <li>Intellect: {props.intellect}</li>
-                <li>Agility: {props.agility}</li>
-                <li>Strength: {props.strength}</li>
-            </ul>
-        </div>
+        <>
+            <div>
+                Points restants: <span class="badge bg-success">{props.pointsLeft}</span>
+            </div>
+            <div>
+                <Features nbPoints={props.strength}>Strength</Features>
+                <Features nbPoints={props.agility}>Agility</Features>
+                <Features nbPoints={props.intellect}>Intelligence</Features>
+            </div>
+        </>
     )
 }
 export default CharacterFeatures;

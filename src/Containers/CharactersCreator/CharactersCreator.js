@@ -8,9 +8,9 @@ class CharactersCreator extends Component {
     state = {
         character: {
             picture: 1,
-            strength: 0,
-            agility: 0,
-            intellect: 0,
+            strength: 3,
+            agility: 2,
+            intellect: 4,
         },
         pointsLeft: 7
     }
@@ -50,8 +50,10 @@ class CharactersCreator extends Component {
     return (
         <>
             <Character 
+                /* Envoie de ttes les props personnage via spread operator */
                 {...this.state.character} 
                 pointsLeft = {this.state.pointsLeft} 
+                /* Ces deux methodes permettant de gerer l'image envoyée au sous composant impage du personnage (CharacterPicture) */
                 previousPicture={this.handlePreviousPicture}
                 nextPicture={this.handleNextPicture}
             />

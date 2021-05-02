@@ -6,7 +6,7 @@ import classes from '../styleCharacter.module.css'
 
 const CharacterPicture = (props) => {
 
-    // En fonction de la valeur du numPicture nous allons afficher le joueur en conséquent
+    // En fonction de la valeur du numPicture nous allons afficher l'image du personnage en conséquent
     let imageToPrint = "";
     if(props.numPicture === 1){
         imageToPrint = ImagePlayer1
@@ -20,6 +20,9 @@ const CharacterPicture = (props) => {
     
     return(
         <div className={classes.divParent}>
+            {/* Fonction leftArrow() + rightArrow déclenché au clic permettant de faire défiler les images des personnages
+                -   Ces propriétés ont été envoyées par le composant parent Personnage (Character) qui lui meme est controlé par le composant CharacterCreator
+            */}
             <div onClick={() => props.leftArrow()} id={classes.triangle} className={classes.triangle_1}> </div>
             <img src={imageToPrint} alt="charac"/>
             <div onClick={() => props.rightArrow()}  id={classes.triangle} className={classes.triangle_2}></div>

@@ -1,0 +1,20 @@
+.inline{
+    display: inline-block;
+    cursor: pointer;
+    vertical-align:middle;
+    background-color: #003BDE;
+    width: 20px;
+    height: 40px;
+}
+.plus{
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 75%, 35% 75%, 35% 50%, 10% 50%);
+
+}
+
+.moins{
+    clip-path: polygon(10% 25%, 35% 25%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 35% 50%, 10% 50%);
+
+}
+.iconPoints{
+    clip-path:polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
